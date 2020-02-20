@@ -4,8 +4,8 @@ resource "aws_s3_bucket" "b" {
   count  = var.counter
   policy = var.policy
   tags = {
-    Name        = "${var.bucket_name}"
-    Environment = "${var.environment}"
+    Name        = var.bucket_name
+    Environment = var.environment
   }
 
 }
